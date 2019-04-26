@@ -1,12 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
 use App\User;
-
 class ProfileController extends Controller
 {
     /**
@@ -18,7 +15,6 @@ class ProfileController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -28,13 +24,12 @@ class ProfileController extends Controller
     {
         $profile = new Profile();
         $edit = FALSE;
-        return view('profileForm', ['profile' => $profile, 'edit' => $edit]);
+        return view('profileForm', ['profile' => $profile,'edit' => $edit  ]);
     }
-
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -59,11 +54,10 @@ class ProfileController extends Controller
 
         return redirect()->route('home')->with('message', 'Profile Created');
     }
-
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -72,11 +66,10 @@ class ProfileController extends Controller
         $profile = $user->profile;
         return view('profile')->with('profile', $profile);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($user, $profile)
@@ -84,17 +77,16 @@ class ProfileController extends Controller
         $user = User::find($user);
         $profile = $user->profile;
         $edit = TRUE;
-        return view('profileForm', ['profile' => $profile, 'edit' => $edit]);
+        return view('profileForm', ['profile' => $profile, 'edit' => $edit ]);
     }
-
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user, $profile)
+    public function update(Request $request,  $user, $profile)
     {
         $input = $request->validate([
             'fname' => 'required',
@@ -110,11 +102,10 @@ class ProfileController extends Controller
         $profile->save();
         return redirect()->route('home')->with('message', 'Updated Profile');
     }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
