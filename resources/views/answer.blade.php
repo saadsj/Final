@@ -7,7 +7,17 @@
                 <div class="card">
                     <div class="card-header">Answer</div>
                     <div class="card-body">
-                        {{$answer->body}}
+                        <div> <p style="float: left;margin-right:15px">
+                                @if($answer->user->avatar == false)
+                                    <img src="https://www.logolynx.com/images/logolynx/d4/d4a80a1f2a0d79a8783d2910f69680cf.png"  height="40" width="40">
+                                @endif
+                                @if($answer->user->avatar == true)
+                                    <img src="{{$answer->user->avatar}}" height="40" width="40">
+                                @endif
+                            </p>
+
+
+                            <p>{{$answer->body}}</p>
                     </div>
                     <div class="card-footer">
                         {{ Form::open(['method'  => 'DELETE', 'route' => ['answers.destroy', $question, $answer->id]])}}
