@@ -34,6 +34,7 @@
                                                     </p>
                                                     <p class="card-text">{{$question->body}}</p>
                                                 </div>
+
                                             </div>
                                             <div class="card-footer">
                                                 <p class="card-text">
@@ -46,7 +47,7 @@
                                         </div>
                                     </div>
                                @empty
-                                        There are no questions to view. You can create a question.
+                                        There are no questions to view,you can create a question.
                                     </a>
                                     @endforelse
 
