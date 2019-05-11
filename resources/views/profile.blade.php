@@ -15,14 +15,16 @@
                                     <img src="{{$profile->user->avatar}}" height="40" width="40">
                                 @endif
                             </p>
-                            <p>My Profile</p>
-                        </div>
+                        <p>My Profile</p>
                     </div>
+                </div>
+
 
                     <div class="card-body ">
                         <span class="font-weight-bold">First Name:</span> {{$profile->fname}}</br>
                         <span class="font-weight-bold">Last Name: </span>{{$profile->lname}}</br>
                         <span class="font-weight-bold">Body: </span>{{$profile->body}}</br>
+                    </div>
                     </div>
                     <div class="card-footer">
                         <a class="btn btn-success float-right" href="{{ route('profile.edit', ['profile_id' => $profile->id,'user_id' => $profile->user->id]) }}">
