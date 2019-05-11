@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class UserTest extends TestCase
 {
     /**
-     * A basic unit test example.
+     * A basic test example.
      *
      * @return void
      */
@@ -19,7 +19,6 @@ class UserTest extends TestCase
 
         $this->assertTrue($user->save());
     }
-
     public function testQuestions()
     {
         $user = factory(\App\User::class)->make();

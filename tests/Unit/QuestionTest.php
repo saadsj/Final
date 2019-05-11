@@ -9,13 +9,13 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class QuestionTest extends TestCase
 {
     /**
-     * A basic unit test example.
+     * A basic test example.
      *
      * @return void
      */
     public function testSave()
     {
-        $user = $user = factory(\App\User::class)->make();
+        $user = factory(\App\User::class)->make();
         $user->save();
         $question = factory(\App\Question::class)->make();
         $question->user()->associate($user);

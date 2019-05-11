@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
 use App\User;
+
 class LoginController extends Controller
 {
     /*
@@ -37,6 +38,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     /**
      * Redirect the user to the Google authentication page.
      *
@@ -46,6 +48,7 @@ class LoginController extends Controller
     {
         return Socialite::driver('google')->redirect();
     }
+
     /**
      * Obtain the user information from Google.
      *
@@ -58,12 +61,10 @@ class LoginController extends Controller
         } catch (\Exception $e) {
             return redirect('/login');
         }
-        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'company.com'){
-            return redirect()->to('/');
-        }
+
         // check if they're an existing user
         $existingUser = User::where('email', $user->email)->first();
+
         if($existingUser){
             // log them in
             auth()->login($existingUser, true);
