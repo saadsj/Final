@@ -6,20 +6,22 @@ use Illuminate\Http\Request;
 
 class CaptchaController extends Controller
 {
-    public function create()
+    public function myCaptcha()
     {
-        return view('captchacreate');
+        return view('myCaptcha');
     }
-    public function captchaValidate(Request $request)
+
+    public function myCaptchaPost(Request $request)
     {
-        $request->validate([
+        $request->validation([
             'email' => 'required|email',
-            'password' => 'required|min:6',
+            'password' => 'required',
             'captcha' => 'required|captcha'
-        ]);
+        ], ['captcha.captcha' => 'Invalid Captcha Code.']);
     }
+
     public function refreshCaptcha()
     {
-        return response()->json(['captcha'=> captcha_img()]);
+        return response()->json(['captcha' => captcha_img()]);
     }
 }
