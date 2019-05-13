@@ -3,13 +3,122 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.13 on 2019-05-10 07:03:08.
+ * Generated for Laravel 5.8.13 on 2019-05-13 05:10:08.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
  */
+
+namespace Laravel\Socialite\Facades { 
+
+    /**
+     * 
+     *
+     * @see \Laravel\Socialite\SocialiteManager
+     */ 
+    class Socialite {
+        
+        /**
+         * Get a driver instance.
+         *
+         * @param string $driver
+         * @return mixed 
+         * @static 
+         */ 
+        public static function with($driver)
+        {
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->with($driver);
+        }
+        
+        /**
+         * Build an OAuth 2 provider instance.
+         *
+         * @param string $provider
+         * @param array $config
+         * @return \Laravel\Socialite\Two\AbstractProvider 
+         * @static 
+         */ 
+        public static function buildProvider($provider, $config)
+        {
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->buildProvider($provider, $config);
+        }
+        
+        /**
+         * Format the server configuration.
+         *
+         * @param array $config
+         * @return array 
+         * @static 
+         */ 
+        public static function formatConfig($config)
+        {
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->formatConfig($config);
+        }
+        
+        /**
+         * Get the default driver name.
+         *
+         * @throws \InvalidArgumentException
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+        
+        /**
+         * Get a driver instance.
+         *
+         * @param string $driver
+         * @return mixed 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function driver($driver = null)
+        {
+            //Method inherited from \Illuminate\Support\Manager            
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->driver($driver);
+        }
+        
+        /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Laravel\Socialite\SocialiteManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {
+            //Method inherited from \Illuminate\Support\Manager            
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+        
+        /**
+         * Get all of the created "drivers".
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDrivers()
+        {
+            //Method inherited from \Illuminate\Support\Manager            
+                        /** @var \Laravel\Socialite\SocialiteManager $instance */
+                        return $instance->getDrivers();
+        }
+         
+    }
+ 
+}
 
 namespace Illuminate\Support\Facades { 
 
@@ -14498,129 +14607,69 @@ namespace Illuminate\Support\Facades {
  
 }
 
-namespace Illuminate\Support { 
+namespace Intervention\Image\Facades { 
 
     /**
      * 
      *
      */ 
-    class Arr {
-         
-    }
-
-    /**
-     * 
-     *
-     */ 
-    class Str {
-         
-    }
- 
-}
-
-namespace Laravel\Socialite\Facades { 
-
-    /**
-     * 
-     *
-     * @see \Laravel\Socialite\SocialiteManager
-     */ 
-    class Socialite {
+    class Image {
         
         /**
-         * Get a driver instance.
-         *
-         * @param string $driver
-         * @return mixed 
-         * @static 
-         */ 
-        public static function with($driver)
-        {
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->with($driver);
-        }
-        
-        /**
-         * Build an OAuth 2 provider instance.
-         *
-         * @param string $provider
-         * @param array $config
-         * @return \Laravel\Socialite\Two\AbstractProvider 
-         * @static 
-         */ 
-        public static function buildProvider($provider, $config)
-        {
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->buildProvider($provider, $config);
-        }
-        
-        /**
-         * Format the server configuration.
+         * Overrides configuration settings
          *
          * @param array $config
-         * @return array 
+         * @return self 
          * @static 
          */ 
-        public static function formatConfig($config)
+        public static function configure($config = array())
         {
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->formatConfig($config);
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
         }
         
         /**
-         * Get the default driver name.
+         * Initiates an Image instance from different input types
          *
-         * @throws \InvalidArgumentException
-         * @return string 
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
          * @static 
          */ 
-        public static function getDefaultDriver()
+        public static function make($data)
         {
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->getDefaultDriver();
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
         }
         
         /**
-         * Get a driver instance.
+         * Creates an empty image canvas
          *
-         * @param string $driver
-         * @return mixed 
-         * @throws \InvalidArgumentException
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
          * @static 
          */ 
-        public static function driver($driver = null)
+        public static function canvas($width, $height, $background = null)
         {
-            //Method inherited from \Illuminate\Support\Manager            
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->driver($driver);
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
         }
         
         /**
-         * Register a custom driver creator Closure.
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
          *
-         * @param string $driver
          * @param \Closure $callback
-         * @return \Laravel\Socialite\SocialiteManager 
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
          * @static 
          */ 
-        public static function extend($driver, $callback)
+        public static function cache($callback, $lifetime = null, $returnObj = false)
         {
-            //Method inherited from \Illuminate\Support\Manager            
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->extend($driver, $callback);
-        }
-        
-        /**
-         * Get all of the created "drivers".
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function getDrivers()
-        {
-            //Method inherited from \Illuminate\Support\Manager            
-                        /** @var \Laravel\Socialite\SocialiteManager $instance */
-                        return $instance->getDrivers();
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
         }
          
     }
@@ -15815,12 +15864,93 @@ namespace Collective\Html {
  
 }
 
+namespace Mews\Captcha\Facades { 
+
+    /**
+     * 
+     *
+     * @see \Mews\Captcha
+     */ 
+    class Captcha {
+        
+        /**
+         * Create captcha image
+         *
+         * @param string $config
+         * @param boolean $api
+         * @return \Mews\Captcha\ImageManager->response 
+         * @static 
+         */ 
+        public static function create($config = 'default', $api = false)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->create($config, $api);
+        }
+        
+        /**
+         * Captcha check
+         *
+         * @param $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function check($value)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->check($value);
+        }
+        
+        /**
+         * Captcha check
+         *
+         * @param $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function check_api($value, $key)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->check_api($value, $key);
+        }
+        
+        /**
+         * Generate captcha image source
+         *
+         * @param null $config
+         * @return string 
+         * @static 
+         */ 
+        public static function src($config = null)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->src($config);
+        }
+        
+        /**
+         * Generate captcha image html tag
+         *
+         * @param null $config
+         * @param array $attrs HTML attributes supplied to the image tag where key is the attribute
+         * and the value is the attribute value
+         * @return string 
+         * @static 
+         */ 
+        public static function img($config = null, $attrs = array())
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->img($config, $attrs);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
-    class App extends \Illuminate\Support\Facades\App {}
+    class Socialite extends \Laravel\Socialite\Facades\Socialite {}
 
-    class Arr extends \Illuminate\Support\Arr {}
+    class App extends \Illuminate\Support\Facades\App {}
 
     class Artisan extends \Illuminate\Support\Facades\Artisan {}
 
@@ -18436,19 +18566,19 @@ namespace  {
 
     class Storage extends \Illuminate\Support\Facades\Storage {}
 
-    class Str extends \Illuminate\Support\Str {}
-
     class URL extends \Illuminate\Support\Facades\URL {}
 
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
 
-    class Socialite extends \Laravel\Socialite\Facades\Socialite {}
+    class Image extends \Intervention\Image\Facades\Image {}
 
     class Form extends \Collective\Html\FormFacade {}
 
     class Html extends \Collective\Html\HtmlFacade {}
+
+    class Captcha extends \Mews\Captcha\Facades\Captcha {}
  
 }
 
