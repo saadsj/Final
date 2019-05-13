@@ -28,13 +28,13 @@ Route::post('/questions/{question_id}/answers/', 'AnswerController@store')->name
 Route::patch('/questions/{question_id}/answer/{answer_id}', 'AnswerController@update')->name('answers.update');
 Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answers.destroy');
 
-Route::resources([
-    'questions' => 'QuestionController',
-]);
-
 Route::get('/redirect', 'Auth\LoginController@redirectToProvider');
 Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('createcaptcha', 'CaptchaController@create');
 Route::post('captcha', 'CaptchaController@captchaValidate');
 Route::get('refreshcaptcha', 'CaptchaController@refreshCaptcha');
+Route::resources([
+    'questions' => 'QuestionController',
+]);
+
