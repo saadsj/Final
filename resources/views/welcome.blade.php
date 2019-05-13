@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="google-site-verification" content="DOVrfkVHGkZXPGNgW3nAUT5VODLWRT6ub2QjhkykVMc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="google-site-verification=fw0f1EM8x7twgLoJJS90CXTwNr_mqZswMq4tpiqR0f4" />
 
 
         <title>Laravel</title>
