@@ -159,12 +159,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Igoshev\Captcha\Providers\CaptchaServiceProvider::class,
         /*
          * Package Service Providers...
          */
         Laravel\Socialite\SocialiteServiceProvider::class,
-        Mews\Captcha\CaptchaServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
