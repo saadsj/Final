@@ -31,9 +31,11 @@ Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@d
 Route::get('/redirect', 'Auth\LoginController@redirectToProvider');
 Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::get('createcaptcha', 'CaptchaController@create');
-Route::post('captcha', 'CaptchaController@captchaValidate');
-Route::get('refreshcaptcha', 'CaptchaController@refreshCaptcha');
+Route::get('my-captcha', 'CaptchaController@myCaptcha')->name ('myCaptcha');
+
+Route::post('my-captcha', 'CaptchaController@myCaptchaPost')->name ('myCaptchaPost');
+
+Route::get('refresh_captcha_', 'CaptchaController@refreshCaptcha')->name ('refresh_captcha');
 Route::resources([
     'questions' => 'QuestionController',
 ]);
