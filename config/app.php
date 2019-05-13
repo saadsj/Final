@@ -159,7 +159,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Igoshev\Captcha\Providers\CaptchaServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
         /*
          * Package Service Providers...
          */
