@@ -80,5 +80,6 @@ class LoginController extends Controller
         }
 
         return redirect($this->redirectPath());
+        return redirect()->to('/home');
     }
 }
