@@ -1,0 +1,5 @@
+
+T	php:S1854&":Remove this useless assignment to local variable '$input'.(±·åƒúÿÿÿÿ
+b	php:S1192"HDefine a constant instead of duplicating this literal "profile" 4 times.(ä®·‚ýÿÿÿÿ
+c	php:S1192'"IDefine a constant instead of duplicating this literal "required" 5 times.(êÂ…Œúÿÿÿÿ
+E	php:S1481["+Remove this unused "$input" local variable.(±·åƒúÿÿÿÿ

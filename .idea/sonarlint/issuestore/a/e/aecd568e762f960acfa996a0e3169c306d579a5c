@@ -1,0 +1,7 @@
+
+T	php:S1854%":Remove this useless assignment to local variable '$input'.(±·åƒúÿÿÿÿ
+^	php:S1192"IDefine a constant instead of duplicating this literal "question" 3 times.(óÉ“…
+b	php:S11921"HDefine a constant instead of duplicating this literal "message" 3 times.(³—À©úÿÿÿÿ
+f	php:S11921"LDefine a constant instead of duplicating this literal "question_id" 3 times.(³—À©úÿÿÿÿ
+\	php:S1192"GDefine a constant instead of duplicating this literal "answer" 4 times.(óÉ“…
+E	php:S1481S"+Remove this unused "$input" local variable.(±·åƒúÿÿÿÿ

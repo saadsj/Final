@@ -1,0 +1,6 @@
+
+T	php:S1854(":Remove this useless assignment to local variable '$input'.(±·åƒúÿÿÿÿ
+c	php:S1192"IDefine a constant instead of duplicating this literal "question" 4 times.(Òğ·şÿÿÿÿ
+]	php:S11922"HDefine a constant instead of duplicating this literal "message" 3 times.( Ö‚ª
+8php:S1253"Remove this commented out code.(¹¥ûåûÿÿÿÿ
+E	php:S1481S"+Remove this unused "$input" local variable.(±·åƒúÿÿÿÿ

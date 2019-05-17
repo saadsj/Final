@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.13 on 2019-05-13 05:10:08.
+ * Generated for Laravel 5.8.13 on 2019-05-17 06:09:45.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -114,6 +114,87 @@ namespace Laravel\Socialite\Facades {
             //Method inherited from \Illuminate\Support\Manager            
                         /** @var \Laravel\Socialite\SocialiteManager $instance */
                         return $instance->getDrivers();
+        }
+         
+    }
+ 
+}
+
+namespace Mews\Captcha\Facades { 
+
+    /**
+     * 
+     *
+     * @see \Mews\Captcha
+     */ 
+    class Captcha {
+        
+        /**
+         * Create captcha image
+         *
+         * @param string $config
+         * @param boolean $api
+         * @return \Mews\Captcha\ImageManager->response 
+         * @static 
+         */ 
+        public static function create($config = 'default', $api = false)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->create($config, $api);
+        }
+        
+        /**
+         * Captcha check
+         *
+         * @param $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function check($value)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->check($value);
+        }
+        
+        /**
+         * Captcha check
+         *
+         * @param $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function check_api($value, $key)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->check_api($value, $key);
+        }
+        
+        /**
+         * Generate captcha image source
+         *
+         * @param null $config
+         * @return string 
+         * @static 
+         */ 
+        public static function src($config = null)
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->src($config);
+        }
+        
+        /**
+         * Generate captcha image html tag
+         *
+         * @param null $config
+         * @param array $attrs HTML attributes supplied to the image tag where key is the attribute
+         * and the value is the attribute value
+         * @return string 
+         * @static 
+         */ 
+        public static function img($config = null, $attrs = array())
+        {
+                        /** @var \Mews\Captcha\Captcha $instance */
+                        return $instance->img($config, $attrs);
         }
          
     }
@@ -15864,91 +15945,12 @@ namespace Collective\Html {
  
 }
 
-namespace Mews\Captcha\Facades { 
-
-    /**
-     * 
-     *
-     * @see \Mews\Captcha
-     */ 
-    class Captcha {
-        
-        /**
-         * Create captcha image
-         *
-         * @param string $config
-         * @param boolean $api
-         * @return \Mews\Captcha\ImageManager->response 
-         * @static 
-         */ 
-        public static function create($config = 'default', $api = false)
-        {
-                        /** @var \Mews\Captcha\Captcha $instance */
-                        return $instance->create($config, $api);
-        }
-        
-        /**
-         * Captcha check
-         *
-         * @param $value
-         * @return bool 
-         * @static 
-         */ 
-        public static function check($value)
-        {
-                        /** @var \Mews\Captcha\Captcha $instance */
-                        return $instance->check($value);
-        }
-        
-        /**
-         * Captcha check
-         *
-         * @param $value
-         * @return bool 
-         * @static 
-         */ 
-        public static function check_api($value, $key)
-        {
-                        /** @var \Mews\Captcha\Captcha $instance */
-                        return $instance->check_api($value, $key);
-        }
-        
-        /**
-         * Generate captcha image source
-         *
-         * @param null $config
-         * @return string 
-         * @static 
-         */ 
-        public static function src($config = null)
-        {
-                        /** @var \Mews\Captcha\Captcha $instance */
-                        return $instance->src($config);
-        }
-        
-        /**
-         * Generate captcha image html tag
-         *
-         * @param null $config
-         * @param array $attrs HTML attributes supplied to the image tag where key is the attribute
-         * and the value is the attribute value
-         * @return string 
-         * @static 
-         */ 
-        public static function img($config = null, $attrs = array())
-        {
-                        /** @var \Mews\Captcha\Captcha $instance */
-                        return $instance->img($config, $attrs);
-        }
-         
-    }
- 
-}
-
 
 namespace  { 
 
     class Socialite extends \Laravel\Socialite\Facades\Socialite {}
+
+    class Captcha extends \Mews\Captcha\Facades\Captcha {}
 
     class App extends \Illuminate\Support\Facades\App {}
 
@@ -18577,8 +18579,6 @@ namespace  {
     class Form extends \Collective\Html\FormFacade {}
 
     class Html extends \Collective\Html\HtmlFacade {}
-
-    class Captcha extends \Mews\Captcha\Facades\Captcha {}
  
 }
 

@@ -54,31 +54,31 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback($driver)
     {
         try {
-            $user = Socialite::driver('google')->user();
+            $user = Socialite::driver($driver)->user();
         } catch (\Exception $e) {
-            return redirect('/login');
+            return redirect()->route('login');
         }
 
-        // check if they're an existing user
-        $existingUser = User::where('email', $user->email)->first();
+        $existingUser = User::where('email', $user->getEmail())->first();
 
-        if($existingUser){
-            // log them in
+        if ($existingUser) {
             auth()->login($existingUser, true);
         } else {
-            // create a new user
-            $newUser                  = new User;
-            $newUser->name            = $user->name;
-            $newUser->email           = $user->email;
-            $newUser->google_id       = $user->id;
-            $newUser->avatar          = $user->avatar;
-            $newUser->avatar_original = $user->avatar_original;
+            $newUser                    = new User;
+            $newUser->provider_name     = $driver;
+            $newUser->provider_id       = $user->getId();
+            $newUser->name              = $user->getName();
+            $newUser->email             = $user->getEmail();
+            $newUser->email_verified_at = now();
+            $newUser->avatar            = $user->getAvatar();
             $newUser->save();
+
             auth()->login($newUser, true);
         }
-        return redirect()->to('/home');
+
+        return redirect($this->redirectPath());
     }
 }

@@ -1,0 +1,17 @@
+
+\	php:S1192."HDefine a constant instead of duplicating this literal "DB_PORT" 3 times.(©ˆìO
+a	php:S1192'"GDefine a constant instead of duplicating this literal "prefix" 5 times.(ò“ƒÙşÿÿÿÿ
+c	php:S11921"IDefine a constant instead of duplicating this literal "password" 6 times.(áÔïûÿÿÿÿ
+f	php:S11920"LDefine a constant instead of duplicating this literal "DB_USERNAME" 3 times.(ˆâ¿Ùşÿÿÿÿ
+[	php:S1192"FDefine a constant instead of duplicating this literal "mysql" 3 times.(£ÛŠÏ
+`	php:S1192;"FDefine a constant instead of duplicating this literal "pgsql" 3 times.(‰¿âÍûÿÿÿÿ
+a	php:S1192%"GDefine a constant instead of duplicating this literal "driver" 5 times.(÷†Ôœùÿÿÿÿ
+`	php:S1192/"FDefine a constant instead of duplicating this literal "forge" 6 times.(şĞ‹åúÿÿÿÿ
+_	php:S1192-"JDefine a constant instead of duplicating this literal "127.0.0.1" 4 times.(ìâ©†
+]	php:S11923"HDefine a constant instead of duplicating this literal "charset" 4 times.(†‡Ø
+^	php:S1192&"IDefine a constant instead of duplicating this literal "database" 7 times.(‡ÜáÍ
+]	php:S1192-"HDefine a constant instead of duplicating this literal "DB_HOST" 3 times.(ìâ©†
+a	php:S1192&"LDefine a constant instead of duplicating this literal "DB_DATABASE" 4 times.(‡ÜáÍ
+i	php:S11926"ODefine a constant instead of duplicating this literal "prefix_indexes" 3 times.(ÔŸıôÿÿÿÿÿ
+c	php:S11920"IDefine a constant instead of duplicating this literal "username" 4 times.(ˆâ¿Ùşÿÿÿÿ
+f	php:S11921"LDefine a constant instead of duplicating this literal "DB_PASSWORD" 3 times.(áÔïûÿÿÿÿ

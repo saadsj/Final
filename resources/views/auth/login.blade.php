@@ -1,5 +1,6 @@
 @extends('layouts.app')
-
+<a href="{{ route('login.provider', 'google') }}"
+   class="btn btn-secondary">{{ __('Google Sign in') }}</a>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
