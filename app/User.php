@@ -32,14 +32,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @mixin \Eloquent
  */
 // These two come from Media Library
-
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\Models\Media;
 
 class User extends Authenticatable implements HasMedia
 {
     // ...
-    use HasMediaTrait;
+
 
     public function registerMediaConversions(Media $media = null)
     {
