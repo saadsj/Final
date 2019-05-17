@@ -32,22 +32,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @mixin \Eloquent
  */
 // These two come from Media Library
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
-use Spatie\MediaLibrary\Models\Media;
-
-class User extends Authenticatable implements HasMedia
-{
-    // ...
-
-
-    public function registerMediaConversions(Media $media = null)
-    {
-        $this->addMediaConversion('thumb')
-            ->width(50)
-            ->height(50);
-    }
-}
 class User extends Authenticatable
 {
     use Notifiable;
