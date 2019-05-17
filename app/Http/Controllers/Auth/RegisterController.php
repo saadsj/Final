@@ -68,5 +68,11 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'captcha'=>'required|captcha'
         ]);
+
+        if (isset($data['avatar'])) {
+            $user->addMediaFromRequest('avatar')->toMediaCollection('avatars');
+        }
+
+        return $user;
     }
 }
