@@ -1,4 +1,6 @@
 <?php
+use App\User;
+use Illuminate\Support\Facades\Input;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +29,17 @@ Route::get('/questions/{question_id}/answers/{answer_id}/edit', 'AnswerControlle
 Route::post('/questions/{question_id}/answers/', 'AnswerController@store')->name('answers.store');
 Route::patch('/questions/{question_id}/answer/{answer_id}', 'AnswerController@update')->name('answers.update');
 Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answers.destroy');
-
+Route::get ( '/', function () {
+    return view ( 'welcome' );
+} );
+Route::any ( '/search', function () {
+    $q = Input::get ( 'q' );
+    $user = User::where ( 'name', 'LIKE', '%' . $q . '%' )->orWhere ( 'email', 'LIKE', '%' . $q . '%' )->get ();
+    if (count ( $user ) > 0)
+        return view ( 'welcome' )->withDetails ( $user )->withQuery ( $q );
+    else
+        return view ( 'welcome' )->withMessage ( 'No Details found. Try to search again !' );
+} );
 
 Route::get('my-captcha', 'CaptchaController@myCaptcha')->name ('myCaptcha');
 
