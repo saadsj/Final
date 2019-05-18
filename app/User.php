@@ -46,7 +46,7 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     protected $fillable = [
-         'email', 'password',
+        'name', 'email', 'password',
     ];
 
     /**
