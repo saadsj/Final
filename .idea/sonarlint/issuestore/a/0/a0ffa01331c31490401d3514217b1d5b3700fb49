@@ -1,3 +1,5 @@
 
 ^	php:S11925"IDefine a constant instead of duplicating this literal "password" 3 times.(òé¾
 [	php:S11924"FDefine a constant instead of duplicating this literal "email" 4 times.(ƒîÐÓ
+>	php:S1763H"Remove this unreachable code.(”Øõ‡üÿÿÿÿ8þü—¥¬-
+Rphp:S836I"2Review the data-flow - use of uninitialized value.(à¤Ãàÿÿÿÿÿ8þü—¥¬-

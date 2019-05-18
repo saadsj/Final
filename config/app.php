@@ -163,7 +163,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Socialite\SocialiteServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -189,7 +189,7 @@ return [
 
     'aliases' => [
         // ...
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
         'App' => Illuminate\Support\Facades\App::class,

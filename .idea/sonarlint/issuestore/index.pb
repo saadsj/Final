@@ -457,3 +457,7 @@ j
 :resources/views/vendor/pagination/simple-default.blade.php,8\7\874af1e55464cd2c61e97ba82776f0d1e4ccb2ef
 >
 routes/web.php,6\b\6b9a783d9b43fee50fd28f56dbd1856d2608f305
+}
+Mdatabase/migrations/2019_05_17_061926_add_socialite_fields_to_users_table.php,2\f\2f229c081a4d473117e4a436bd560d9851d0329c
+l
+<database/migrations/2019_05_17_082008_create_media_table.php,d\9\d9383e69f9863b84f0073f89402936f031ce3f46

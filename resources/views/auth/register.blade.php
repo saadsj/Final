@@ -1,6 +1,5 @@
 @extends('layouts.app')
-<a href="{{ route('login.provider', 'google') }}"
-   class="btn btn-secondary">{{ __('Google Sign in') }}</a>
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
